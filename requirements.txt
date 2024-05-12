@@ -4,5 +4,10 @@ seaborn
 matplotlib 
 scikit-learn
 logger
+dataclasses 
+dill 
+xgboost 
+catboost
 
+# Comment -e . when you try to install your packages
 # -e . 

@@ -5,6 +5,7 @@ import sys
 from dataclasses import dataclass 
 from sklearn.model_selection import train_test_split
 import pandas as pd 
+from sklearn.metrics import r2_score 
 
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import ModelTrainerConfig,ModelTrainer

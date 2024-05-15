@@ -10,8 +10,9 @@ from sklearn.ensemble import (
     RandomForestRegressor
 )
 
+from sklearn.metrics import r2_score
+
 from sklearn.linear_model import LinearRegression ,Ridge
-from sklearn.metrics import r2_score 
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
@@ -42,14 +43,19 @@ class ModelTrainer:
             )
 
             models = {
-                "Random Forest": RandomForestRegressor(),
-                "Decision Tree": DecisionTreeRegressor(),
-                "Gradient Boosting": GradientBoostingRegressor(),
-                "Linear Regression": LinearRegression(),
-                "XGBRegressor": XGBRegressor(),
-                "CatBoosting Regressor": CatBoostRegressor(verbose=False),
-                "AdaBoost Regressor": AdaBoostRegressor(),
-            }
+                    'AdaBoost Regressor': AdaBoostRegressor(),
+                    'CatBoosting Regressor': CatBoostRegressor(verbose=False),
+                    'Decision Tree': DecisionTreeRegressor(),
+                    'Gradient Boosting': GradientBoostingRegressor(),
+                    'Linear Regression': LinearRegression(),
+                    'Random Forest': RandomForestRegressor(),
+                    'XGBRegressor': XGBRegressor()
+                    }
+
+            
+
+
+            
             
             model_report:dict = evaluate_model(X_train=X_train,y_train=y_train,
                                                X_test=X_test,y_test=y_test,models=models)

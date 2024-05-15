@@ -8,6 +8,7 @@ dataclasses
 dill 
 xgboost 
 catboost
+flask
 
 # Comment -e . when you try to install your packages
 # -e . 
